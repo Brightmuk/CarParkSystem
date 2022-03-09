@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class AddVehicleForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.datePicker = New System.Windows.Forms.DateTimePicker()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.comboParkingType = New System.Windows.Forms.ComboBox()
         Me.lblType = New System.Windows.Forms.Label()
@@ -38,12 +38,13 @@ Partial Class Form1
         Me.Label6 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
-        'DateTimePicker1
+        'datePicker
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(434, 331)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(100, 23)
-        Me.DateTimePicker1.TabIndex = 38
+        Me.datePicker.CustomFormat = "dd/ MM/yyyy"
+        Me.datePicker.Location = New System.Drawing.Point(434, 331)
+        Me.datePicker.Name = "datePicker"
+        Me.datePicker.Size = New System.Drawing.Size(100, 23)
+        Me.datePicker.TabIndex = 38
         '
         'Label5
         '
@@ -58,6 +59,7 @@ Partial Class Form1
         'comboParkingType
         '
         Me.comboParkingType.FormattingEnabled = True
+        Me.comboParkingType.Items.AddRange(New Object() {"Reserved", "Quick"})
         Me.comboParkingType.Location = New System.Drawing.Point(434, 190)
         Me.comboParkingType.Name = "comboParkingType"
         Me.comboParkingType.Size = New System.Drawing.Size(100, 23)
@@ -86,6 +88,7 @@ Partial Class Form1
         'comboSpot
         '
         Me.comboSpot.FormattingEnabled = True
+        Me.comboSpot.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
         Me.comboSpot.Location = New System.Drawing.Point(434, 145)
         Me.comboSpot.Name = "comboSpot"
         Me.comboSpot.Size = New System.Drawing.Size(100, 23)
@@ -161,7 +164,7 @@ Partial Class Form1
         Me.Label6.TabIndex = 40
         Me.Label6.Text = "Add car to parking"
         '
-        'Form1
+        'AddVehicleForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -169,7 +172,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnAdd)
-        Me.Controls.Add(Me.DateTimePicker1)
+        Me.Controls.Add(Me.datePicker)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.comboParkingType)
         Me.Controls.Add(Me.lblType)
@@ -181,14 +184,14 @@ Partial Class Form1
         Me.Controls.Add(Me.txtNumberPlate)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtOwner)
-        Me.Name = "Form1"
+        Me.Name = "AddVehicleForm"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents datePicker As DateTimePicker
     Friend WithEvents Label5 As Label
     Friend WithEvents comboParkingType As ComboBox
     Friend WithEvents lblType As Label

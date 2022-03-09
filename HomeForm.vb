@@ -20,4 +20,17 @@ Public Class HomeForm
         End Try
 
     End Sub
+
+    Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
+        Dim addForm = New AddVehicleForm
+        addForm.Show()
+
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim search = New SearchForm
+        search.Show()
+
+
+    End Sub
 End Class
