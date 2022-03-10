@@ -25,8 +25,8 @@ Partial Class SignInForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.lblPassword = New System.Windows.Forms.Label()
         Me.lblUsername = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtPassword = New System.Windows.Forms.TextBox()
+        Me.txtUsername = New System.Windows.Forms.TextBox()
         Me.btnSignIn = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -60,19 +60,19 @@ Partial Class SignInForm
         Me.lblUsername.TabIndex = 2
         Me.lblUsername.Text = "Username"
         '
-        'TextBox1
+        'txtPassword
         '
-        Me.TextBox1.Location = New System.Drawing.Point(409, 199)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox1.TabIndex = 3
+        Me.txtPassword.Location = New System.Drawing.Point(409, 199)
+        Me.txtPassword.Name = "txtPassword"
+        Me.txtPassword.Size = New System.Drawing.Size(100, 23)
+        Me.txtPassword.TabIndex = 3
         '
-        'TextBox2
+        'txtUsername
         '
-        Me.TextBox2.Location = New System.Drawing.Point(409, 145)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(100, 23)
-        Me.TextBox2.TabIndex = 4
+        Me.txtUsername.Location = New System.Drawing.Point(409, 145)
+        Me.txtUsername.Name = "txtUsername"
+        Me.txtUsername.Size = New System.Drawing.Size(100, 23)
+        Me.txtUsername.TabIndex = 4
         '
         'btnSignIn
         '
@@ -90,8 +90,8 @@ Partial Class SignInForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnSignIn)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtUsername)
+        Me.Controls.Add(Me.txtPassword)
         Me.Controls.Add(Me.lblUsername)
         Me.Controls.Add(Me.lblPassword)
         Me.Controls.Add(Me.Label1)
@@ -105,7 +105,7 @@ Partial Class SignInForm
     Friend WithEvents Label1 As Label
     Friend WithEvents lblPassword As Label
     Friend WithEvents lblUsername As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtPassword As TextBox
+    Friend WithEvents txtUsername As TextBox
     Friend WithEvents btnSignIn As Button
 End Class

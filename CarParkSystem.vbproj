@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>CarParkSystem</RootNamespace>
-    <StartupObject>CarParkSystem.Form1</StartupObject>
+    <StartupObject>CarParkSystem.SignInForm</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 

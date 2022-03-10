@@ -28,7 +28,7 @@ Partial Class AddVehicleForm
         Me.lblType = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.comboSpot = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblCustomerName = New System.Windows.Forms.Label()
         Me.txtFee = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNumberPlate = New System.Windows.Forms.TextBox()
@@ -36,12 +36,14 @@ Partial Class AddVehicleForm
         Me.txtOwner = New System.Windows.Forms.TextBox()
         Me.btnAdd = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.lblCustomerPhone = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'datePicker
         '
         Me.datePicker.CustomFormat = "dd/ MM/yyyy"
-        Me.datePicker.Location = New System.Drawing.Point(434, 331)
+        Me.datePicker.Location = New System.Drawing.Point(259, 289)
         Me.datePicker.Name = "datePicker"
         Me.datePicker.Size = New System.Drawing.Size(100, 23)
         Me.datePicker.TabIndex = 38
@@ -50,7 +52,7 @@ Partial Class AddVehicleForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(262, 337)
+        Me.Label5.Location = New System.Drawing.Point(87, 295)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 14)
         Me.Label5.TabIndex = 37
@@ -60,7 +62,7 @@ Partial Class AddVehicleForm
         '
         Me.comboParkingType.FormattingEnabled = True
         Me.comboParkingType.Items.AddRange(New Object() {"Reserved", "Quick"})
-        Me.comboParkingType.Location = New System.Drawing.Point(434, 190)
+        Me.comboParkingType.Location = New System.Drawing.Point(259, 191)
         Me.comboParkingType.Name = "comboParkingType"
         Me.comboParkingType.Size = New System.Drawing.Size(100, 23)
         Me.comboParkingType.TabIndex = 36
@@ -69,7 +71,7 @@ Partial Class AddVehicleForm
         '
         Me.lblType.AutoSize = True
         Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.lblType.Location = New System.Drawing.Point(262, 193)
+        Me.lblType.Location = New System.Drawing.Point(87, 194)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(94, 14)
         Me.lblType.TabIndex = 35
@@ -79,7 +81,7 @@ Partial Class AddVehicleForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label1.Location = New System.Drawing.Point(262, 108)
+        Me.Label1.Location = New System.Drawing.Point(87, 109)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(97, 14)
         Me.Label1.TabIndex = 27
@@ -89,24 +91,24 @@ Partial Class AddVehicleForm
         '
         Me.comboSpot.FormattingEnabled = True
         Me.comboSpot.Items.AddRange(New Object() {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10"})
-        Me.comboSpot.Location = New System.Drawing.Point(434, 145)
+        Me.comboSpot.Location = New System.Drawing.Point(259, 146)
         Me.comboSpot.Name = "comboSpot"
         Me.comboSpot.Size = New System.Drawing.Size(100, 23)
         Me.comboSpot.TabIndex = 34
         '
-        'Label2
+        'lblCustomerName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(262, 244)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 14)
-        Me.Label2.TabIndex = 28
-        Me.Label2.Text = "Owner"
+        Me.lblCustomerName.AutoSize = True
+        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerName.Location = New System.Drawing.Point(454, 112)
+        Me.lblCustomerName.Name = "lblCustomerName"
+        Me.lblCustomerName.Size = New System.Drawing.Size(112, 14)
+        Me.lblCustomerName.TabIndex = 28
+        Me.lblCustomerName.Text = "Customer Name"
         '
         'txtFee
         '
-        Me.txtFee.Location = New System.Drawing.Point(434, 286)
+        Me.txtFee.Location = New System.Drawing.Point(259, 244)
         Me.txtFee.Name = "txtFee"
         Me.txtFee.Size = New System.Drawing.Size(100, 23)
         Me.txtFee.TabIndex = 33
@@ -115,7 +117,7 @@ Partial Class AddVehicleForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label3.Location = New System.Drawing.Point(262, 148)
+        Me.Label3.Location = New System.Drawing.Point(87, 149)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(92, 14)
         Me.Label3.TabIndex = 29
@@ -123,7 +125,7 @@ Partial Class AddVehicleForm
         '
         'txtNumberPlate
         '
-        Me.txtNumberPlate.Location = New System.Drawing.Point(434, 105)
+        Me.txtNumberPlate.Location = New System.Drawing.Point(259, 106)
         Me.txtNumberPlate.Name = "txtNumberPlate"
         Me.txtNumberPlate.Size = New System.Drawing.Size(100, 23)
         Me.txtNumberPlate.TabIndex = 32
@@ -132,7 +134,7 @@ Partial Class AddVehicleForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(262, 286)
+        Me.Label4.Location = New System.Drawing.Point(87, 244)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 14)
         Me.Label4.TabIndex = 30
@@ -140,14 +142,14 @@ Partial Class AddVehicleForm
         '
         'txtOwner
         '
-        Me.txtOwner.Location = New System.Drawing.Point(434, 241)
+        Me.txtOwner.Location = New System.Drawing.Point(626, 109)
         Me.txtOwner.Name = "txtOwner"
         Me.txtOwner.Size = New System.Drawing.Size(100, 23)
         Me.txtOwner.TabIndex = 31
         '
         'btnAdd
         '
-        Me.btnAdd.Location = New System.Drawing.Point(339, 406)
+        Me.btnAdd.Location = New System.Drawing.Point(348, 383)
         Me.btnAdd.Name = "btnAdd"
         Me.btnAdd.Size = New System.Drawing.Size(75, 23)
         Me.btnAdd.TabIndex = 39
@@ -164,12 +166,31 @@ Partial Class AddVehicleForm
         Me.Label6.TabIndex = 40
         Me.Label6.Text = "Add car to parking"
         '
+        'lblCustomerPhone
+        '
+        Me.lblCustomerPhone.AutoSize = True
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerPhone.Location = New System.Drawing.Point(454, 168)
+        Me.lblCustomerPhone.Name = "lblCustomerPhone"
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(115, 14)
+        Me.lblCustomerPhone.TabIndex = 41
+        Me.lblCustomerPhone.Text = "Customer Phone"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(626, 165)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 23)
+        Me.TextBox1.TabIndex = 42
+        '
         'AddVehicleForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lblCustomerPhone)
+        Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.btnAdd)
         Me.Controls.Add(Me.datePicker)
@@ -178,7 +199,7 @@ Partial Class AddVehicleForm
         Me.Controls.Add(Me.lblType)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.comboSpot)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblCustomerName)
         Me.Controls.Add(Me.txtFee)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.txtNumberPlate)
@@ -197,7 +218,7 @@ Partial Class AddVehicleForm
     Friend WithEvents lblType As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents comboSpot As ComboBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblCustomerName As Label
     Friend WithEvents txtFee As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNumberPlate As TextBox
@@ -205,4 +226,6 @@ Partial Class AddVehicleForm
     Friend WithEvents txtOwner As TextBox
     Friend WithEvents btnAdd As Button
     Friend WithEvents Label6 As Label
+    Friend WithEvents lblCustomerPhone As Label
+    Friend WithEvents TextBox1 As TextBox
 End Class

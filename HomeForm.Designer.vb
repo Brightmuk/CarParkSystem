@@ -50,12 +50,14 @@ Partial Class HomeForm
         Me.lblType = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.comboSpot = New System.Windows.Forms.ComboBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblCustomerName = New System.Windows.Forms.Label()
         Me.txtFee = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtNumberPlate = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.txtOwner = New System.Windows.Forms.TextBox()
+        Me.txtCustomerName = New System.Windows.Forms.TextBox()
+        Me.lblCustomerPhone = New System.Windows.Forms.Label()
+        Me.txtCustomerPhone = New System.Windows.Forms.TextBox()
         CType(Me.FileSystemWatcher1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -255,6 +257,8 @@ Partial Class HomeForm
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.lblCustomerPhone)
+        Me.Panel2.Controls.Add(Me.txtCustomerPhone)
         Me.Panel2.Controls.Add(Me.lblTitle)
         Me.Panel2.Controls.Add(Me.DateTimePicker1)
         Me.Panel2.Controls.Add(Me.Label5)
@@ -262,12 +266,12 @@ Partial Class HomeForm
         Me.Panel2.Controls.Add(Me.lblType)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.comboSpot)
-        Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.lblCustomerName)
         Me.Panel2.Controls.Add(Me.txtFee)
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.txtNumberPlate)
         Me.Panel2.Controls.Add(Me.Label4)
-        Me.Panel2.Controls.Add(Me.txtOwner)
+        Me.Panel2.Controls.Add(Me.txtCustomerName)
         Me.Panel2.Location = New System.Drawing.Point(430, 2)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(439, 446)
@@ -285,7 +289,7 @@ Partial Class HomeForm
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(228, 338)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(228, 381)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(100, 23)
         Me.DateTimePicker1.TabIndex = 26
@@ -294,7 +298,7 @@ Partial Class HomeForm
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label5.Location = New System.Drawing.Point(56, 344)
+        Me.Label5.Location = New System.Drawing.Point(56, 387)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(38, 14)
         Me.Label5.TabIndex = 25
@@ -336,19 +340,19 @@ Partial Class HomeForm
         Me.comboSpot.Size = New System.Drawing.Size(100, 23)
         Me.comboSpot.TabIndex = 22
         '
-        'Label2
+        'lblCustomerName
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label2.Location = New System.Drawing.Point(56, 237)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(52, 14)
-        Me.Label2.TabIndex = 16
-        Me.Label2.Text = "Owner"
+        Me.lblCustomerName.AutoSize = True
+        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerName.Location = New System.Drawing.Point(56, 237)
+        Me.lblCustomerName.Name = "lblCustomerName"
+        Me.lblCustomerName.Size = New System.Drawing.Size(112, 14)
+        Me.lblCustomerName.TabIndex = 16
+        Me.lblCustomerName.Text = "Customer Name"
         '
         'txtFee
         '
-        Me.txtFee.Location = New System.Drawing.Point(228, 290)
+        Me.txtFee.Location = New System.Drawing.Point(228, 333)
         Me.txtFee.Name = "txtFee"
         Me.txtFee.Size = New System.Drawing.Size(100, 23)
         Me.txtFee.TabIndex = 21
@@ -374,18 +378,35 @@ Partial Class HomeForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label4.Location = New System.Drawing.Point(56, 290)
+        Me.Label4.Location = New System.Drawing.Point(56, 333)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(31, 14)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Fee"
         '
-        'txtOwner
+        'txtCustomerName
         '
-        Me.txtOwner.Location = New System.Drawing.Point(228, 234)
-        Me.txtOwner.Name = "txtOwner"
-        Me.txtOwner.Size = New System.Drawing.Size(100, 23)
-        Me.txtOwner.TabIndex = 19
+        Me.txtCustomerName.Location = New System.Drawing.Point(228, 234)
+        Me.txtCustomerName.Name = "txtCustomerName"
+        Me.txtCustomerName.Size = New System.Drawing.Size(100, 23)
+        Me.txtCustomerName.TabIndex = 19
+        '
+        'lblCustomerPhone
+        '
+        Me.lblCustomerPhone.AutoSize = True
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerPhone.Location = New System.Drawing.Point(56, 290)
+        Me.lblCustomerPhone.Name = "lblCustomerPhone"
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(115, 14)
+        Me.lblCustomerPhone.TabIndex = 28
+        Me.lblCustomerPhone.Text = "Customer Phone"
+        '
+        'txtCustomerPhone
+        '
+        Me.txtCustomerPhone.Location = New System.Drawing.Point(228, 287)
+        Me.txtCustomerPhone.Name = "txtCustomerPhone"
+        Me.txtCustomerPhone.Size = New System.Drawing.Size(100, 23)
+        Me.txtCustomerPhone.TabIndex = 29
         '
         'HomeForm
         '
@@ -427,12 +448,12 @@ Partial Class HomeForm
     Friend WithEvents lblType As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents comboSpot As ComboBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblCustomerName As Label
     Friend WithEvents txtFee As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtNumberPlate As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents txtOwner As TextBox
+    Friend WithEvents txtCustomerName As TextBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents lblTitleOne As Label
     Friend WithEvents btnDisplay As Button
@@ -440,4 +461,6 @@ Partial Class HomeForm
     Friend WithEvents btnNext As Button
     Friend WithEvents btnPrevious As Button
     Friend WithEvents btnFirst As Button
+    Friend WithEvents lblCustomerPhone As Label
+    Friend WithEvents txtCustomerPhone As TextBox
 End Class
