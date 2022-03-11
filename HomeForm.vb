@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class HomeForm
-    Dim query1 = "select occupied from parkingSlot"
+    Dim query1 = "select occupied, SlotNumber from parkingSlot"
     Dim da1 As New MySqlDataAdapter(query1, SignInForm.conn)
     Dim ds1 As New DataSet
 
@@ -9,6 +9,24 @@ Public Class HomeForm
     Dim da2 As New MySqlDataAdapter(query2, SignInForm.conn)
     Dim ds2 As New DataSet
 
+    Public Sub Delete()
+        Try
+            SignInForm.conn.Open()
+            Dim query2 = "DELETE  from where ParkingSLot='" & currentBooking & "'"
+            Dim cmd2 = New MySqlCommand(query2, SignInForm.conn)
+            cmd2.ExecuteNonQuery()
+
+            Dim query3 = "UPDATE  parkingSlot set occupied=false where SlotNumber='" & currentBooking & "'"
+            Dim cmd3 = New MySqlCommand(query2, SignInForm.conn)
+            cmd3.ExecuteNonQuery()
+            MessageBox.Show("Booking deleted!")
+
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
+        SignInForm.conn.Close()
+
+    End Sub
     Function isOccpiedColor(Val)
         Dim finalColor
         If Val = True Then finalColor = Color.Red Else finalColor = Color.Lime
@@ -44,11 +62,6 @@ Public Class HomeForm
         End Try
 
     End Sub
-    Private Sub btnAdd_Click(sender As Object, e As EventArgs)
-        Dim addForm = New AddBookingForm
-        addForm.Show()
-
-    End Sub
 
 
     Private Sub ParkingSlotsToolStripMenuItem_Click(sender As Object, e As EventArgs)
@@ -72,12 +85,14 @@ Public Class HomeForm
 
     Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
         Dim display = New DisplayForm
+        display.Tag = ds1.Tables(0).Rows(currentBooking).Item(1)
         display.Show()
 
     End Sub
 
     Private Sub btnAmmend_Click(sender As Object, e As EventArgs) Handles btnAmmend.Click
         Dim ammend = New AmmendForm
+        ammend.Tag = ds1.Tables(0).Rows(currentBooking).Item(1)
         ammend.Show()
 
     End Sub
@@ -93,6 +108,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(0).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(0).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -105,6 +121,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(1).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(1).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -117,6 +134,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(2).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(2).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -129,6 +147,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(3).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(3).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -141,6 +160,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(4).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(4).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -153,6 +173,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(5).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(5).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -165,6 +186,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(6).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(6).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -177,6 +199,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(7).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(7).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -189,6 +212,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(8).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(8).Item(1)
             display.Show()
         Else
             Dim add = New AddBookingForm
@@ -201,6 +225,7 @@ Public Class HomeForm
         If ds1.Tables(0).Rows(9).Item(0) Then
             MessageBox.Show("Parking slot occupied")
             Dim display = New DisplayForm
+            display.Tag = ds1.Tables(0).Rows(9).Item(1)
             display.Show()
 
         Else
@@ -212,21 +237,20 @@ Public Class HomeForm
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        If currentBooking < ds2.Tables(0).Rows.Count - 1 Then
-
-            currentBooking = currentBooking + 1
+        If currentBooking = ds2.Tables(0).Rows.Count - 1 Then
+            MessageBox.Show("That is the last booking!")
+        Else
+            currentBooking += 1
             GetBookings()
             Label5.Text = currentBooking
 
-        Else
-            MessageBox.Show("That is the last booking!")
         End If
 
     End Sub
 
     Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
         If currentBooking > 0 Then
-            currentBooking = currentBooking - 1
+            currentBooking -= 1
             Label5.Text = currentBooking
             GetBookings()
 
@@ -243,6 +267,11 @@ Public Class HomeForm
     Private Sub btnLast_Click(sender As Object, e As EventArgs) Handles btnLast.Click
         currentBooking = ds2.Tables(0).Rows.Count - 1
         GetBookings()
+
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Delete()
 
     End Sub
 End Class

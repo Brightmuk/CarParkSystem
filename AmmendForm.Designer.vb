@@ -163,7 +163,7 @@ Partial Class AmmendForm
         Me.txtOwner.Size = New System.Drawing.Size(100, 23)
         Me.txtOwner.TabIndex = 47
         '
-        'Form1
+        'AmmendForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -183,7 +183,7 @@ Partial Class AmmendForm
         Me.Controls.Add(Me.txtNumberPlate)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtOwner)
-        Me.Name = "Form1"
+        Me.Name = "AmmendForm"
         Me.Text = "Form1"
         Me.ResumeLayout(False)
         Me.PerformLayout()

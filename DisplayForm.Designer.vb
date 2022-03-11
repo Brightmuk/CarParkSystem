@@ -35,17 +35,19 @@ Partial Class DisplayForm
         Me.txtCustomerPhone = New System.Windows.Forms.TextBox()
         Me.lblCustomerPhone = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.btnCheckout = New System.Windows.Forms.Button()
-        Me.txtParkingSpot = New System.Windows.Forms.TextBox()
-        Me.txtParkingType = New System.Windows.Forms.TextBox()
         Me.txtDate = New System.Windows.Forms.TextBox()
+        Me.txtParkingType = New System.Windows.Forms.TextBox()
+        Me.txtParkingSpot = New System.Windows.Forms.TextBox()
+        Me.btnCheckout = New System.Windows.Forms.Button()
         Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'txtCustomerName
         '
+        Me.txtCustomerName.Enabled = False
         Me.txtCustomerName.Location = New System.Drawing.Point(228, 234)
         Me.txtCustomerName.Name = "txtCustomerName"
+        Me.txtCustomerName.ReadOnly = True
         Me.txtCustomerName.Size = New System.Drawing.Size(100, 23)
         Me.txtCustomerName.TabIndex = 19
         '
@@ -61,8 +63,10 @@ Partial Class DisplayForm
         '
         'txtNumberPlate
         '
+        Me.txtNumberPlate.Enabled = False
         Me.txtNumberPlate.Location = New System.Drawing.Point(228, 65)
         Me.txtNumberPlate.Name = "txtNumberPlate"
+        Me.txtNumberPlate.ReadOnly = True
         Me.txtNumberPlate.Size = New System.Drawing.Size(100, 23)
         Me.txtNumberPlate.TabIndex = 20
         '
@@ -78,8 +82,10 @@ Partial Class DisplayForm
         '
         'txtFee
         '
+        Me.txtFee.Enabled = False
         Me.txtFee.Location = New System.Drawing.Point(228, 333)
         Me.txtFee.Name = "txtFee"
+        Me.txtFee.ReadOnly = True
         Me.txtFee.Size = New System.Drawing.Size(100, 23)
         Me.txtFee.TabIndex = 21
         '
@@ -135,8 +141,10 @@ Partial Class DisplayForm
         '
         'txtCustomerPhone
         '
+        Me.txtCustomerPhone.Enabled = False
         Me.txtCustomerPhone.Location = New System.Drawing.Point(228, 287)
         Me.txtCustomerPhone.Name = "txtCustomerPhone"
+        Me.txtCustomerPhone.ReadOnly = True
         Me.txtCustomerPhone.Size = New System.Drawing.Size(100, 23)
         Me.txtCustomerPhone.TabIndex = 29
         '
@@ -173,6 +181,33 @@ Partial Class DisplayForm
         Me.Panel2.Size = New System.Drawing.Size(439, 438)
         Me.Panel2.TabIndex = 22
         '
+        'txtDate
+        '
+        Me.txtDate.Enabled = False
+        Me.txtDate.Location = New System.Drawing.Point(228, 378)
+        Me.txtDate.Name = "txtDate"
+        Me.txtDate.ReadOnly = True
+        Me.txtDate.Size = New System.Drawing.Size(100, 23)
+        Me.txtDate.TabIndex = 32
+        '
+        'txtParkingType
+        '
+        Me.txtParkingType.Enabled = False
+        Me.txtParkingType.Location = New System.Drawing.Point(228, 177)
+        Me.txtParkingType.Name = "txtParkingType"
+        Me.txtParkingType.ReadOnly = True
+        Me.txtParkingType.Size = New System.Drawing.Size(100, 23)
+        Me.txtParkingType.TabIndex = 31
+        '
+        'txtParkingSpot
+        '
+        Me.txtParkingSpot.Enabled = False
+        Me.txtParkingSpot.Location = New System.Drawing.Point(228, 121)
+        Me.txtParkingSpot.Name = "txtParkingSpot"
+        Me.txtParkingSpot.ReadOnly = True
+        Me.txtParkingSpot.Size = New System.Drawing.Size(100, 23)
+        Me.txtParkingSpot.TabIndex = 30
+        '
         'btnCheckout
         '
         Me.btnCheckout.Location = New System.Drawing.Point(697, 404)
@@ -181,27 +216,6 @@ Partial Class DisplayForm
         Me.btnCheckout.TabIndex = 23
         Me.btnCheckout.Text = "Checkout"
         Me.btnCheckout.UseVisualStyleBackColor = True
-        '
-        'txtParkingSpot
-        '
-        Me.txtParkingSpot.Location = New System.Drawing.Point(228, 121)
-        Me.txtParkingSpot.Name = "txtParkingSpot"
-        Me.txtParkingSpot.Size = New System.Drawing.Size(100, 23)
-        Me.txtParkingSpot.TabIndex = 30
-        '
-        'txtParkingType
-        '
-        Me.txtParkingType.Location = New System.Drawing.Point(228, 177)
-        Me.txtParkingType.Name = "txtParkingType"
-        Me.txtParkingType.Size = New System.Drawing.Size(100, 23)
-        Me.txtParkingType.TabIndex = 31
-        '
-        'txtDate
-        '
-        Me.txtDate.Location = New System.Drawing.Point(228, 378)
-        Me.txtDate.Name = "txtDate"
-        Me.txtDate.Size = New System.Drawing.Size(100, 23)
-        Me.txtDate.TabIndex = 32
         '
         'DisplayForm
         '
