@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class SignInForm
-    Public Shared Property conn As New MySqlConnection(connectionString:="server=localhost;user id=root;password=beatsbydre;database=atmdb")
+    Public Shared Property conn As New MySqlConnection(connectionString:="server=localhost;user id=root;password=beatsbydre;database=carPark")
 
     Public Shared Property username As String
 
@@ -10,7 +10,7 @@ Public Class SignInForm
 
         Try
             conn.Open()
-            Dim query = "SELECT * FROM users WHERE username='" & txtUsername.Text & "' AND Password='" & txtPassword.Text & "';"
+            Dim query = "SELECT * FROM users WHERE name='" & txtUsername.Text & "' AND password='" & txtPassword.Text & "';"
             Dim cmd = New MySqlCommand(query, conn)
             Dim adapter As MySqlDataAdapter = New MySqlDataAdapter(cmd)
             Dim result As DataTable = New DataTable()
