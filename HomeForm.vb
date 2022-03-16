@@ -2,6 +2,7 @@
 
 Public Class HomeForm
     Private Const v As Integer = 1
+    Dim isFilled = False
 
     Dim currentBooking = 0
     Dim bookingsCount As Integer
@@ -12,9 +13,6 @@ Public Class HomeForm
     Dim query2 = "select * from bookings"
     Dim da2 As New MySqlDataAdapter(query2, SignInForm.conn)
     Dim ds2 As New DataSet
-
-
-
 
 
     Public Sub Checkout(btn)
@@ -50,13 +48,14 @@ Public Class HomeForm
 
     End Sub
     Public Sub Search()
+
         Dim query3 = "select * from bookings where NumberPlate='" & txtSearch.Text & "';"
         Dim da3 As New MySqlDataAdapter(query3, SignInForm.conn)
         Dim ds3 As New DataSet
         Try
             SignInForm.conn.Open()
-            If (ds3.Tables(0).Rows.Count > 1) Then
-                da3.Fill(ds3)
+            da3.Fill(ds3)
+            If (ds3.Tables(0).Rows.Count > 0) Then
                 txtCustomerName.Text = ds3.Tables(0).Rows(0).Item(6)
                 txtCustomerPhone.Text = ds3.Tables(0).Rows(0).Item(7)
                 txtDate.Text = ds3.Tables(0).Rows(0).Item(4)
@@ -64,6 +63,8 @@ Public Class HomeForm
                 txtNumberPlate.Text = ds3.Tables(0).Rows(0).Item(5)
                 txtParkSpot.Text = ds3.Tables(0).Rows(0).Item(2)
                 txtParkingType.Text = ds3.Tables(0).Rows(0).Item(1)
+
+                btnCheckout.Enabled = True
             Else
                 MessageBox.Show("Record not found!")
             End If
@@ -78,14 +79,14 @@ Public Class HomeForm
     Public Sub Delete()
         Try
             SignInForm.conn.Open()
-            Dim slot = ds1.Tables(0).Rows(currentBooking).Item(1)
-            Dim query2 = "DELETE  from bookings where ParkingSLot=" & slot & ""
-            Dim cmd2 = New MySqlCommand(query2, SignInForm.conn)
-            cmd2.ExecuteNonQuery()
+            Dim slot = ds2.Tables(0).Rows(currentBooking).Item(2)
+            Dim delQuery = "DELETE  from bookings where ParkingSLot=" & slot & ""
+            Dim delCmd = New MySqlCommand(delQuery, SignInForm.conn)
+            delCmd.ExecuteNonQuery()
 
-            Dim query3 = "UPDATE  parkingSlot set occupied=false where SlotNumber='" & slot & "'"
-            Dim cmd3 = New MySqlCommand(query2, SignInForm.conn)
-            cmd3.ExecuteNonQuery()
+            Dim freeQuery = "UPDATE  parkingSlot set occupied=false where SlotNumber='" & slot & "'"
+            Dim freeCmd = New MySqlCommand(freeQuery, SignInForm.conn)
+            freeCmd.ExecuteNonQuery()
             MessageBox.Show("Booking deleted!")
             Me.Close()
 
@@ -100,13 +101,14 @@ Public Class HomeForm
     End Sub
     Function isOccpiedColor(Val)
         Dim finalColor
-        If Val = True Then finalColor = Color.Red Else finalColor = Color.Lime
+        If Val = True Then finalColor = Color.FromArgb(185, 22, 70) Else finalColor = Color.FromArgb(16, 86, 82)
         Return finalColor
     End Function
 
     Public Sub GetBookings()
-
-        da2.Fill(ds2)
+        If Not isFilled Then
+            da2.Fill(ds2)
+        End If
         bookingsCount = ds2.Tables(0).Rows.Count
         txtCustomerView.Text = ds2.Tables(0).Rows(currentBooking).Item(6)
         txtNumberPlateView.Text = ds2.Tables(0).Rows(currentBooking).Item(5)
@@ -172,8 +174,9 @@ Public Class HomeForm
 
     Private Sub HomeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GetSLots()
-        GetBookings()
 
+        GetBookings()
+        isFilled = True
 
     End Sub
 
@@ -315,17 +318,18 @@ Public Class HomeForm
             MessageBox.Show("That is the last booking!")
         Else
             currentBooking += v
-            Refresh()
+            GetBookings()
 
 
         End If
 
     End Sub
 
+
     Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
         If currentBooking > 0 Then
             currentBooking -= v
-            Refresh()
+            GetBookings()
 
         Else
             MessageBox.Show("That is the first booking!")
@@ -360,4 +364,5 @@ Public Class HomeForm
     Private Sub btnCheckoutForm_Click(sender As Object, e As EventArgs) Handles btnCheckoutForm.Click
         Checkout(0)
     End Sub
+
 End Class

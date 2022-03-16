@@ -168,6 +168,7 @@ Partial Class HomeForm
         'btnCheckout
         '
         Me.btnCheckout.BackColor = System.Drawing.Color.Black
+        Me.btnCheckout.Enabled = False
         Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCheckout.ForeColor = System.Drawing.Color.White
         Me.btnCheckout.Location = New System.Drawing.Point(192, 369)
@@ -340,7 +341,9 @@ Partial Class HomeForm
         '
         'txtParkingSpotView
         '
+        Me.txtParkingSpotView.BackColor = System.Drawing.Color.White
         Me.txtParkingSpotView.Enabled = False
+        Me.txtParkingSpotView.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtParkingSpotView.Location = New System.Drawing.Point(496, 139)
         Me.txtParkingSpotView.Name = "txtParkingSpotView"
         Me.txtParkingSpotView.Size = New System.Drawing.Size(100, 22)
@@ -371,7 +374,9 @@ Partial Class HomeForm
         '
         'txtCustomerView
         '
+        Me.txtCustomerView.BackColor = System.Drawing.Color.White
         Me.txtCustomerView.Enabled = False
+        Me.txtCustomerView.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtCustomerView.Location = New System.Drawing.Point(496, 186)
         Me.txtCustomerView.Name = "txtCustomerView"
         Me.txtCustomerView.Size = New System.Drawing.Size(100, 22)
@@ -379,7 +384,9 @@ Partial Class HomeForm
         '
         'txtNumberPlateView
         '
+        Me.txtNumberPlateView.BackColor = System.Drawing.Color.White
         Me.txtNumberPlateView.Enabled = False
+        Me.txtNumberPlateView.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.txtNumberPlateView.Location = New System.Drawing.Point(496, 89)
         Me.txtNumberPlateView.Name = "txtNumberPlateView"
         Me.txtNumberPlateView.Size = New System.Drawing.Size(100, 22)
@@ -389,6 +396,7 @@ Partial Class HomeForm
         '
         Me.btnLast.BackColor = System.Drawing.Color.Black
         Me.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnLast.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnLast.ForeColor = System.Drawing.Color.White
         Me.btnLast.Location = New System.Drawing.Point(532, 253)
         Me.btnLast.Name = "btnLast"
@@ -414,6 +422,7 @@ Partial Class HomeForm
         '
         Me.btnNext.BackColor = System.Drawing.Color.Black
         Me.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnNext.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnNext.ForeColor = System.Drawing.Color.White
         Me.btnNext.Location = New System.Drawing.Point(460, 253)
         Me.btnNext.Name = "btnNext"
@@ -436,6 +445,7 @@ Partial Class HomeForm
         '
         Me.btnPrevious.BackColor = System.Drawing.Color.Black
         Me.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnPrevious.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnPrevious.ForeColor = System.Drawing.Color.White
         Me.btnPrevious.Location = New System.Drawing.Point(383, 253)
         Me.btnPrevious.Name = "btnPrevious"
@@ -477,13 +487,14 @@ Partial Class HomeForm
         Me.btnDelete.Name = "btnDelete"
         Me.btnDelete.Size = New System.Drawing.Size(86, 41)
         Me.btnDelete.TabIndex = 61
-        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.Text = "DELETE"
         Me.btnDelete.UseVisualStyleBackColor = False
         '
         'btnFirst
         '
         Me.btnFirst.BackColor = System.Drawing.Color.Black
         Me.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFirst.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.btnFirst.ForeColor = System.Drawing.Color.White
         Me.btnFirst.Location = New System.Drawing.Point(313, 253)
         Me.btnFirst.Name = "btnFirst"
@@ -544,8 +555,8 @@ Partial Class HomeForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(110, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer))
-        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(110, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(139, Byte), Integer))
+        Me.Label4.BackColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(82, Byte), Integer))
+        Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(16, Byte), Integer), CType(CType(86, Byte), Integer), CType(CType(82, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(823, 37)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(15, 14)
@@ -555,8 +566,8 @@ Partial Class HomeForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(72, Byte), Integer))
-        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(216, Byte), Integer), CType(CType(33, Byte), Integer), CType(CType(72, Byte), Integer))
+        Me.Label3.BackColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(70, Byte), Integer))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(185, Byte), Integer), CType(CType(22, Byte), Integer), CType(CType(70, Byte), Integer))
         Me.Label3.Location = New System.Drawing.Point(823, 12)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(15, 14)
