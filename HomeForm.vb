@@ -1,6 +1,10 @@
 ﻿Imports MySql.Data.MySqlClient
 
 Public Class HomeForm
+    Private Const v As Integer = 1
+
+    Dim currentBooking = 0
+    Dim bookingsCount As Integer
     Dim query1 = "select occupied, SlotNumber from parkingSlot"
     Dim da1 As New MySqlDataAdapter(query1, SignInForm.conn)
     Dim ds1 As New DataSet
@@ -9,17 +13,84 @@ Public Class HomeForm
     Dim da2 As New MySqlDataAdapter(query2, SignInForm.conn)
     Dim ds2 As New DataSet
 
+
+
+
+
+    Public Sub Checkout(btn)
+        Dim val
+        If btn = 1 Then
+            val = txtParkSpot.Text
+        Else
+            val = txtParkingSpotView.Text
+        End If
+        Try
+            SignInForm.conn.Open()
+            Dim query4 = "UPDATE parkingSlot SET occupied=false WHERE slotNumber='" & val & "';"
+            Dim cmd4 = New MySqlCommand(query4, SignInForm.conn)
+            cmd4.ExecuteNonQuery()
+
+
+            Dim bookingId = CLng(DateTime.UtcNow.Subtract(New DateTime(1970, 1, 1)).TotalMilliseconds)
+            Dim query5 = "UPDATE bookings set Paid=true where ParkingSLot=" & val & ""
+            Dim cmd5 = New MySqlCommand(query5, SignInForm.conn)
+            cmd5.ExecuteNonQuery()
+
+
+            MessageBox.Show("The vehicle has been checked out, slot" & val & " is now available")
+            Me.Close()
+            Dim home = New HomeForm
+            home.Show()
+
+
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        SignInForm.conn.Close()
+
+    End Sub
+    Public Sub Search()
+        Dim query3 = "select * from bookings where NumberPlate='" & txtSearch.Text & "';"
+        Dim da3 As New MySqlDataAdapter(query3, SignInForm.conn)
+        Dim ds3 As New DataSet
+        Try
+            SignInForm.conn.Open()
+            If (ds3.Tables(0).Rows.Count > 1) Then
+                da3.Fill(ds3)
+                txtCustomerName.Text = ds3.Tables(0).Rows(0).Item(6)
+                txtCustomerPhone.Text = ds3.Tables(0).Rows(0).Item(7)
+                txtDate.Text = ds3.Tables(0).Rows(0).Item(4)
+                txtFee.Text = ds3.Tables(0).Rows(0).Item(3)
+                txtNumberPlate.Text = ds3.Tables(0).Rows(0).Item(5)
+                txtParkSpot.Text = ds3.Tables(0).Rows(0).Item(2)
+                txtParkingType.Text = ds3.Tables(0).Rows(0).Item(1)
+            Else
+                MessageBox.Show("Record not found!")
+            End If
+            SignInForm.conn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+
+            SignInForm.conn.Close()
+        End Try
+
+    End Sub
     Public Sub Delete()
         Try
             SignInForm.conn.Open()
-            Dim query2 = "DELETE  from where ParkingSLot='" & currentBooking & "'"
+            Dim slot = ds1.Tables(0).Rows(currentBooking).Item(1)
+            Dim query2 = "DELETE  from bookings where ParkingSLot=" & slot & ""
             Dim cmd2 = New MySqlCommand(query2, SignInForm.conn)
             cmd2.ExecuteNonQuery()
 
-            Dim query3 = "UPDATE  parkingSlot set occupied=false where SlotNumber='" & currentBooking & "'"
+            Dim query3 = "UPDATE  parkingSlot set occupied=false where SlotNumber='" & slot & "'"
             Dim cmd3 = New MySqlCommand(query2, SignInForm.conn)
             cmd3.ExecuteNonQuery()
             MessageBox.Show("Booking deleted!")
+            Me.Close()
+
+            Dim home = New HomeForm
+            home.Show()
 
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -32,9 +103,11 @@ Public Class HomeForm
         If Val = True Then finalColor = Color.Red Else finalColor = Color.Lime
         Return finalColor
     End Function
-    Dim currentBooking = 0
+
     Public Sub GetBookings()
+
         da2.Fill(ds2)
+        bookingsCount = ds2.Tables(0).Rows.Count
         txtCustomerView.Text = ds2.Tables(0).Rows(currentBooking).Item(6)
         txtNumberPlateView.Text = ds2.Tables(0).Rows(currentBooking).Item(5)
         txtParkingSpotView.Text = ds2.Tables(0).Rows(currentBooking).Item(2)
@@ -44,16 +117,16 @@ Public Class HomeForm
         Try
 
             da1.Fill(ds1)
-            btnSlot1.BackColor = isOccpiedColor(ds1.Tables(0).Rows(0).Item(0))
-            btnSlot2.BackColor = isOccpiedColor(ds1.Tables(0).Rows(1).Item(0))
-            btnSLot3.BackColor = isOccpiedColor(ds1.Tables(0).Rows(2).Item(0))
-            btnSlot4.BackColor = isOccpiedColor(ds1.Tables(0).Rows(3).Item(0))
-            btnSlot5.BackColor = isOccpiedColor(ds1.Tables(0).Rows(4).Item(0))
-            btnSlot6.BackColor = isOccpiedColor(ds1.Tables(0).Rows(5).Item(0))
-            btnSlot7.BackColor = isOccpiedColor(ds1.Tables(0).Rows(6).Item(0))
-            btnSlot8.BackColor = isOccpiedColor(ds1.Tables(0).Rows(7).Item(0))
-            btnSlot9.BackColor = isOccpiedColor(ds1.Tables(0).Rows(8).Item(0))
-            btnSLot10.BackColor = isOccpiedColor(ds1.Tables(0).Rows(9).Item(0))
+            btnSlot1.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(0).Item(0))
+            btnSlot2.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(1).Item(0))
+            btnSLot3.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(2).Item(0))
+            btnSlot4.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(3).Item(0))
+            btnSlot5.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(4).Item(0))
+            btnSlot6.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(5).Item(0))
+            btnSlot7.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(6).Item(0))
+            btnSlot8.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(7).Item(0))
+            btnSlot9.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(8).Item(0))
+            btnSLot10.ForeColor = isOccpiedColor(ds1.Tables(0).Rows(9).Item(0))
 
             SignInForm.conn.Close()
         Catch ex As Exception
@@ -85,14 +158,14 @@ Public Class HomeForm
 
     Private Sub btnDisplay_Click(sender As Object, e As EventArgs) Handles btnDisplay.Click
         Dim display = New DisplayForm
-        display.Tag = ds1.Tables(0).Rows(currentBooking).Item(1)
+        display.Tag = ds2.Tables(0).Rows(currentBooking).Item(2)
         display.Show()
 
     End Sub
 
     Private Sub btnAmmend_Click(sender As Object, e As EventArgs) Handles btnAmmend.Click
         Dim ammend = New AmmendForm
-        ammend.Tag = ds1.Tables(0).Rows(currentBooking).Item(1)
+        ammend.Tag = ds2.Tables(0).Rows(currentBooking).Item(2)
         ammend.Show()
 
     End Sub
@@ -237,12 +310,13 @@ Public Class HomeForm
     End Sub
 
     Private Sub btnNext_Click(sender As Object, e As EventArgs) Handles btnNext.Click
-        If currentBooking = ds2.Tables(0).Rows.Count - 1 Then
+
+        If (currentBooking + v) = bookingsCount Then
             MessageBox.Show("That is the last booking!")
         Else
-            currentBooking += 1
-            GetBookings()
-            Label5.Text = currentBooking
+            currentBooking += v
+            Refresh()
+
 
         End If
 
@@ -250,9 +324,8 @@ Public Class HomeForm
 
     Private Sub btnPrevious_Click(sender As Object, e As EventArgs) Handles btnPrevious.Click
         If currentBooking > 0 Then
-            currentBooking -= 1
-            Label5.Text = currentBooking
-            GetBookings()
+            currentBooking -= v
+            Refresh()
 
         Else
             MessageBox.Show("That is the first booking!")
@@ -273,5 +346,18 @@ Public Class HomeForm
     Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
         Delete()
 
+    End Sub
+
+    Private Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Search()
+
+    End Sub
+
+    Private Sub btnCheckout_Click(sender As Object, e As EventArgs) Handles btnCheckout.Click
+        Checkout(1)
+    End Sub
+
+    Private Sub btnCheckoutForm_Click(sender As Object, e As EventArgs) Handles btnCheckoutForm.Click
+        Checkout(0)
     End Sub
 End Class

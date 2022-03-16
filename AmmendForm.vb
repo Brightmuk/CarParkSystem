@@ -5,13 +5,14 @@ Public Class AmmendForm
         Try
             SignInForm.conn.Open()
             Dim slot = Convert.ToInt32(Me.Tag.ToString)
-            Dim query2 = "UPDATE  bookings set ParkingType='" & comboParkingType.Text & "', ParkingSLot=" & comboSpot.Text & ",Fee=" & txtFee.Text & ", CustomerName='" & txtOwner.Text & "', CustomerPhone='" & txtPhone.Text & "',at ammend NumberPlate='" & txtNumberPlate.Text & "' where parkingSLot='" & slot & "';"
+            Dim query2 = "UPDATE  bookings set ParkingType='" & comboParkingType.Text & "', ParkingSLot=" & comboSpot.Text & ",Fee=" & txtFee.Text & ", CustomerName='" & txtOwner.Text & "', CustomerPhone='" & txtPhone.Text & "',NumberPlate='" & txtNumberPlate.Text & "' where parkingSLot='" & slot & "';"
             Dim cmd2 = New MySqlCommand(query2, SignInForm.conn)
             cmd2.ExecuteNonQuery()
 
 
             MessageBox.Show("Booking updated!")
             Me.Close()
+
             Dim home = New HomeForm
             home.Show()
 

@@ -43,20 +43,20 @@ Partial Class SignInForm
         'lblPassword
         '
         Me.lblPassword.AutoSize = True
-        Me.lblPassword.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblPassword.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblPassword.Location = New System.Drawing.Point(304, 202)
         Me.lblPassword.Name = "lblPassword"
-        Me.lblPassword.Size = New System.Drawing.Size(72, 14)
+        Me.lblPassword.Size = New System.Drawing.Size(69, 14)
         Me.lblPassword.TabIndex = 1
         Me.lblPassword.Text = "Password"
         '
         'lblUsername
         '
         Me.lblUsername.AutoSize = True
-        Me.lblUsername.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblUsername.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblUsername.Location = New System.Drawing.Point(304, 148)
         Me.lblUsername.Name = "lblUsername"
-        Me.lblUsername.Size = New System.Drawing.Size(74, 14)
+        Me.lblUsername.Size = New System.Drawing.Size(71, 14)
         Me.lblUsername.TabIndex = 2
         Me.lblUsername.Text = "Username"
         '
@@ -77,18 +77,21 @@ Partial Class SignInForm
         '
         'btnSignIn
         '
-        Me.btnSignIn.Location = New System.Drawing.Point(363, 295)
+        Me.btnSignIn.BackColor = System.Drawing.Color.Black
+        Me.btnSignIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSignIn.ForeColor = System.Drawing.Color.White
+        Me.btnSignIn.Location = New System.Drawing.Point(363, 308)
         Me.btnSignIn.Name = "btnSignIn"
-        Me.btnSignIn.Size = New System.Drawing.Size(75, 23)
+        Me.btnSignIn.Size = New System.Drawing.Size(82, 33)
         Me.btnSignIn.TabIndex = 5
-        Me.btnSignIn.Text = "Sign in"
-        Me.btnSignIn.UseVisualStyleBackColor = True
+        Me.btnSignIn.Text = "SIGN IN"
+        Me.btnSignIn.UseVisualStyleBackColor = False
         '
         'SignInForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnSignIn)
         Me.Controls.Add(Me.txtUsername)

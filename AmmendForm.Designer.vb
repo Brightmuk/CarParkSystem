@@ -41,10 +41,10 @@ Partial Class AmmendForm
         'lblCustomerPhone
         '
         Me.lblCustomerPhone.AutoSize = True
-        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerPhone.Location = New System.Drawing.Point(264, 291)
         Me.lblCustomerPhone.Name = "lblCustomerPhone"
-        Me.lblCustomerPhone.Size = New System.Drawing.Size(115, 14)
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(112, 14)
         Me.lblCustomerPhone.TabIndex = 55
         Me.lblCustomerPhone.Text = "Customer Phone"
         '
@@ -59,7 +59,7 @@ Partial Class AmmendForm
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Verdana", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(309, 39)
+        Me.Label6.Location = New System.Drawing.Point(329, 39)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(159, 25)
         Me.Label6.TabIndex = 54
@@ -67,12 +67,15 @@ Partial Class AmmendForm
         '
         'btnAmmend
         '
-        Me.btnAmmend.Location = New System.Drawing.Point(368, 388)
+        Me.btnAmmend.BackColor = System.Drawing.Color.Black
+        Me.btnAmmend.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAmmend.ForeColor = System.Drawing.Color.White
+        Me.btnAmmend.Location = New System.Drawing.Point(345, 394)
         Me.btnAmmend.Name = "btnAmmend"
-        Me.btnAmmend.Size = New System.Drawing.Size(75, 23)
+        Me.btnAmmend.Size = New System.Drawing.Size(100, 33)
         Me.btnAmmend.TabIndex = 53
-        Me.btnAmmend.Text = "Ammend"
-        Me.btnAmmend.UseVisualStyleBackColor = True
+        Me.btnAmmend.Text = "AMMEND"
+        Me.btnAmmend.UseVisualStyleBackColor = False
         '
         'comboParkingType
         '
@@ -86,20 +89,20 @@ Partial Class AmmendForm
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblType.Location = New System.Drawing.Point(264, 184)
         Me.lblType.Name = "lblType"
-        Me.lblType.Size = New System.Drawing.Size(94, 14)
+        Me.lblType.Size = New System.Drawing.Size(87, 14)
         Me.lblType.TabIndex = 51
         Me.lblType.Text = "Parking Type"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(264, 99)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 14)
+        Me.Label1.Size = New System.Drawing.Size(92, 14)
         Me.Label1.TabIndex = 43
         Me.Label1.Text = "Number Plate"
         '
@@ -115,10 +118,10 @@ Partial Class AmmendForm
         'lblCustomerName
         '
         Me.lblCustomerName.AutoSize = True
-        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerName.Location = New System.Drawing.Point(264, 235)
         Me.lblCustomerName.Name = "lblCustomerName"
-        Me.lblCustomerName.Size = New System.Drawing.Size(112, 14)
+        Me.lblCustomerName.Size = New System.Drawing.Size(108, 14)
         Me.lblCustomerName.TabIndex = 44
         Me.lblCustomerName.Text = "Customer Name"
         '
@@ -132,10 +135,10 @@ Partial Class AmmendForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(264, 139)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 14)
+        Me.Label3.Size = New System.Drawing.Size(87, 14)
         Me.Label3.TabIndex = 45
         Me.Label3.Text = "Parking Spot"
         '
@@ -149,10 +152,10 @@ Partial Class AmmendForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(264, 336)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 14)
+        Me.Label4.Size = New System.Drawing.Size(30, 14)
         Me.Label4.TabIndex = 46
         Me.Label4.Text = "Fee"
         '
@@ -167,7 +170,7 @@ Partial Class AmmendForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblCustomerPhone)
         Me.Controls.Add(Me.txtPhone)

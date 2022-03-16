@@ -44,6 +44,7 @@ Partial Class DisplayForm
         '
         'txtCustomerName
         '
+        Me.txtCustomerName.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtCustomerName.Enabled = False
         Me.txtCustomerName.Location = New System.Drawing.Point(228, 234)
         Me.txtCustomerName.Name = "txtCustomerName"
@@ -54,15 +55,16 @@ Partial Class DisplayForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(56, 333)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 14)
+        Me.Label4.Size = New System.Drawing.Size(30, 14)
         Me.Label4.TabIndex = 18
         Me.Label4.Text = "Fee"
         '
         'txtNumberPlate
         '
+        Me.txtNumberPlate.BackColor = System.Drawing.Color.White
         Me.txtNumberPlate.Enabled = False
         Me.txtNumberPlate.Location = New System.Drawing.Point(228, 65)
         Me.txtNumberPlate.Name = "txtNumberPlate"
@@ -73,15 +75,16 @@ Partial Class DisplayForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(56, 124)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 14)
+        Me.Label3.Size = New System.Drawing.Size(87, 14)
         Me.Label3.TabIndex = 17
         Me.Label3.Text = "Parking Spot"
         '
         'txtFee
         '
+        Me.txtFee.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtFee.Enabled = False
         Me.txtFee.Location = New System.Drawing.Point(228, 333)
         Me.txtFee.Name = "txtFee"
@@ -92,40 +95,40 @@ Partial Class DisplayForm
         'lblCustomerName
         '
         Me.lblCustomerName.AutoSize = True
-        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerName.Location = New System.Drawing.Point(56, 237)
         Me.lblCustomerName.Name = "lblCustomerName"
-        Me.lblCustomerName.Size = New System.Drawing.Size(112, 14)
+        Me.lblCustomerName.Size = New System.Drawing.Size(108, 14)
         Me.lblCustomerName.TabIndex = 16
         Me.lblCustomerName.Text = "Customer Name"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(56, 68)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 14)
+        Me.Label1.Size = New System.Drawing.Size(92, 14)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Number Plate"
         '
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblType.Location = New System.Drawing.Point(56, 180)
         Me.lblType.Name = "lblType"
-        Me.lblType.Size = New System.Drawing.Size(94, 14)
+        Me.lblType.Size = New System.Drawing.Size(87, 14)
         Me.lblType.TabIndex = 23
         Me.lblType.Text = "Parking Type"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label5.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label5.Location = New System.Drawing.Point(56, 387)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(38, 14)
+        Me.Label5.Size = New System.Drawing.Size(37, 14)
         Me.Label5.TabIndex = 25
         Me.Label5.Text = "Date"
         '
@@ -141,6 +144,7 @@ Partial Class DisplayForm
         '
         'txtCustomerPhone
         '
+        Me.txtCustomerPhone.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtCustomerPhone.Enabled = False
         Me.txtCustomerPhone.Location = New System.Drawing.Point(228, 287)
         Me.txtCustomerPhone.Name = "txtCustomerPhone"
@@ -151,16 +155,16 @@ Partial Class DisplayForm
         'lblCustomerPhone
         '
         Me.lblCustomerPhone.AutoSize = True
-        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerPhone.Location = New System.Drawing.Point(56, 290)
         Me.lblCustomerPhone.Name = "lblCustomerPhone"
-        Me.lblCustomerPhone.Size = New System.Drawing.Size(115, 14)
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(112, 14)
         Me.lblCustomerPhone.TabIndex = 28
         Me.lblCustomerPhone.Text = "Customer Phone"
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.White
         Me.Panel2.Controls.Add(Me.txtDate)
         Me.Panel2.Controls.Add(Me.txtParkingType)
         Me.Panel2.Controls.Add(Me.txtParkingSpot)
@@ -183,6 +187,7 @@ Partial Class DisplayForm
         '
         'txtDate
         '
+        Me.txtDate.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtDate.Enabled = False
         Me.txtDate.Location = New System.Drawing.Point(228, 378)
         Me.txtDate.Name = "txtDate"
@@ -192,6 +197,7 @@ Partial Class DisplayForm
         '
         'txtParkingType
         '
+        Me.txtParkingType.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtParkingType.Enabled = False
         Me.txtParkingType.Location = New System.Drawing.Point(228, 177)
         Me.txtParkingType.Name = "txtParkingType"
@@ -201,6 +207,7 @@ Partial Class DisplayForm
         '
         'txtParkingSpot
         '
+        Me.txtParkingSpot.BackColor = System.Drawing.SystemColors.ControlLightLight
         Me.txtParkingSpot.Enabled = False
         Me.txtParkingSpot.Location = New System.Drawing.Point(228, 121)
         Me.txtParkingSpot.Name = "txtParkingSpot"
@@ -210,18 +217,21 @@ Partial Class DisplayForm
         '
         'btnCheckout
         '
-        Me.btnCheckout.Location = New System.Drawing.Point(697, 404)
+        Me.btnCheckout.BackColor = System.Drawing.Color.Black
+        Me.btnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCheckout.ForeColor = System.Drawing.Color.White
+        Me.btnCheckout.Location = New System.Drawing.Point(687, 387)
         Me.btnCheckout.Name = "btnCheckout"
-        Me.btnCheckout.Size = New System.Drawing.Size(75, 23)
+        Me.btnCheckout.Size = New System.Drawing.Size(88, 51)
         Me.btnCheckout.TabIndex = 23
-        Me.btnCheckout.Text = "Checkout"
-        Me.btnCheckout.UseVisualStyleBackColor = True
+        Me.btnCheckout.Text = "CHECKOUT"
+        Me.btnCheckout.UseVisualStyleBackColor = False
         '
         'DisplayForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.btnCheckout)
         Me.Controls.Add(Me.Panel2)

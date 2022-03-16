@@ -52,20 +52,20 @@ Partial Class AddBookingForm
         'lblType
         '
         Me.lblType.AutoSize = True
-        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblType.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblType.Location = New System.Drawing.Point(472, 110)
         Me.lblType.Name = "lblType"
-        Me.lblType.Size = New System.Drawing.Size(94, 14)
+        Me.lblType.Size = New System.Drawing.Size(87, 14)
         Me.lblType.TabIndex = 35
         Me.lblType.Text = "Parking Type"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label1.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label1.Location = New System.Drawing.Point(92, 116)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(97, 14)
+        Me.Label1.Size = New System.Drawing.Size(92, 14)
         Me.Label1.TabIndex = 27
         Me.Label1.Text = "Number Plate"
         '
@@ -81,10 +81,10 @@ Partial Class AddBookingForm
         'lblCustomerName
         '
         Me.lblCustomerName.AutoSize = True
-        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerName.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerName.Location = New System.Drawing.Point(92, 209)
         Me.lblCustomerName.Name = "lblCustomerName"
-        Me.lblCustomerName.Size = New System.Drawing.Size(112, 14)
+        Me.lblCustomerName.Size = New System.Drawing.Size(108, 14)
         Me.lblCustomerName.TabIndex = 28
         Me.lblCustomerName.Text = "Customer Name"
         '
@@ -98,10 +98,10 @@ Partial Class AddBookingForm
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label3.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label3.Location = New System.Drawing.Point(472, 162)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(92, 14)
+        Me.Label3.Size = New System.Drawing.Size(87, 14)
         Me.Label3.TabIndex = 29
         Me.Label3.Text = "Parking Spot"
         '
@@ -115,10 +115,10 @@ Partial Class AddBookingForm
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.Label4.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label4.Location = New System.Drawing.Point(472, 209)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 14)
+        Me.Label4.Size = New System.Drawing.Size(30, 14)
         Me.Label4.TabIndex = 30
         Me.Label4.Text = "Fee"
         '
@@ -131,18 +131,22 @@ Partial Class AddBookingForm
         '
         'btnUpdate
         '
-        Me.btnUpdate.Location = New System.Drawing.Point(357, 388)
+        Me.btnUpdate.BackColor = System.Drawing.Color.Black
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.btnUpdate.ForeColor = System.Drawing.Color.White
+        Me.btnUpdate.Location = New System.Drawing.Point(352, 363)
         Me.btnUpdate.Name = "btnUpdate"
-        Me.btnUpdate.Size = New System.Drawing.Size(75, 23)
+        Me.btnUpdate.Size = New System.Drawing.Size(95, 36)
         Me.btnUpdate.TabIndex = 39
-        Me.btnUpdate.Text = "Update"
-        Me.btnUpdate.UseVisualStyleBackColor = True
+        Me.btnUpdate.Text = "UPDATE"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
         'Label6
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Verdana", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label6.Location = New System.Drawing.Point(289, 34)
+        Me.Label6.Location = New System.Drawing.Point(324, 33)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(167, 25)
         Me.Label6.TabIndex = 40
@@ -151,10 +155,10 @@ Partial Class AddBookingForm
         'lblCustomerPhone
         '
         Me.lblCustomerPhone.AutoSize = True
-        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCustomerPhone.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCustomerPhone.Location = New System.Drawing.Point(92, 265)
         Me.lblCustomerPhone.Name = "lblCustomerPhone"
-        Me.lblCustomerPhone.Size = New System.Drawing.Size(115, 14)
+        Me.lblCustomerPhone.Size = New System.Drawing.Size(112, 14)
         Me.lblCustomerPhone.TabIndex = 41
         Me.lblCustomerPhone.Text = "Customer Phone"
         '
@@ -168,10 +172,10 @@ Partial Class AddBookingForm
         'lblCarColor
         '
         Me.lblCarColor.AutoSize = True
-        Me.lblCarColor.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblCarColor.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.lblCarColor.Location = New System.Drawing.Point(92, 159)
         Me.lblCarColor.Name = "lblCarColor"
-        Me.lblCarColor.Size = New System.Drawing.Size(94, 14)
+        Me.lblCarColor.Size = New System.Drawing.Size(87, 14)
         Me.lblCarColor.TabIndex = 43
         Me.lblCarColor.Text = "Vehicle Color"
         '
@@ -186,7 +190,7 @@ Partial Class AddBookingForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.lblCarColor)
         Me.Controls.Add(Me.txtCarColor)
